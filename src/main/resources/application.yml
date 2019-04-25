@@ -1,0 +1,16 @@
+
+server:
+  port: 8090
+
+spring:
+  data:
+    mongodb:
+      host: 132.232.42.192
+      port: 27017
+      database: springdata
+
+
+  redis:
+    host: 132.232.42.192
+    port: 6379
+    database: 1
