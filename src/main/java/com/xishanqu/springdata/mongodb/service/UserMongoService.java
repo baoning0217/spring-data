@@ -1,10 +1,13 @@
 package com.xishanqu.springdata.mongodb.service;
 
+import com.xishanqu.springdata.common.base.APage;
 import com.xishanqu.springdata.common.dto.ParamDto;
 import com.xishanqu.springdata.common.vo.SysUserVo;
 import com.xishanqu.springdata.mongodb.dao.UserMongoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @Author BaoNing 2019/4/25
@@ -51,6 +54,19 @@ public class UserMongoService {
     public Integer updateSysUser(ParamDto paramDto){
         return  userMongoDao.updateSysUser(paramDto);
     }
+
+    /**
+     * findAllSysUser
+     * @param page
+     * @return
+     */
+    public APage<SysUserVo> findAllSysUser(APage<SysUserVo> page) {
+        List<SysUserVo> sysUserVos = userMongoDao.findAllSysUser(page).getList();
+        
+
+        return null;
+    }
+
 
 
 }
